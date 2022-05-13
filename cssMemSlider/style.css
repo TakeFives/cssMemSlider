@@ -1,3 +1,38 @@
-*{
+* {
   box-sizing: border-box;
+}
+
+body {
+  background: hsl(204, 6%, 16%);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 1024px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  white-space: nowrap;
+  font-size: 0;
+  transition: 0.8s;
+}
+
+.slide-item {
+  display: inline-block;
+  white-space: normal;
+  height: 100%;
+  width: 100%;
+}
+
+.slide-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
