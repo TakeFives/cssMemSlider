@@ -13,7 +13,7 @@ body {
 }
 
 .wrapper {
-  margin: 5%;
+  margin: 3%;
   max-width: 1024px;
   width: 100%;
   position: relative;
@@ -49,7 +49,6 @@ s {
   white-space: normal;
   width: 100%;
   max-width: 1024px;
-  background-color: brown;
   border-radius: 10px;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -69,13 +68,15 @@ s {
   font-size: 1.6em;
   overflow: hidden;
   grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: column;
 }
 
 .slide-text {
   display: inline-block;
   width: 100%;
   transition: 0.8s;
-  padding: 10px 0;
+  line-height: 50px;
   color: #fff;
 }
 
@@ -99,6 +100,7 @@ s {
   width: 20px;
   display: block;
   height: 20px;
+  background: rgba(112, 172, 255, 0.5);
   border-radius: 30px;
 }
 
@@ -107,7 +109,7 @@ s {
 }
 
 /*style for bullets*/
-.slider>s:target~.bullets>* span {
+.slider>s:target~.bullets>*span {
   background: rgba(112, 172, 255, 0.5);
 }
 
@@ -116,7 +118,7 @@ s {
   background: rgba(112, 172, 255, 1);
 }
 
-#s2:target~.bullets>*:nth-child(2)span {
+#s2:target~.bullets>*:nth-child(2) span {
   background: rgba(112, 172, 255, 1);
 }
 
@@ -124,7 +126,7 @@ s {
   background: rgba(112, 172, 255, 1);
 }
 
-#s4:target~.bullets>*:nth-child(4)span {
+#s4:target~.bullets>*:nth-child(4) span {
   background: rgba(112, 172, 255, 1);
 }
 
@@ -164,6 +166,13 @@ s {
   transform: translateY(-300%);
 }
 
+@media (max-width: 1023px) {
+  .slide-text {
+    font-size: 3vw;
+  }
+
+}
+
 @media (max-width: 767px) {
   .slider {
     display: flex;
@@ -188,6 +197,14 @@ s {
     order: 2;
   }
 
+  @media (max-width: 424px) {
+    .slide-texts {
+      height: 24px;
+    }
 
-
+    .slide-text {
+      font-size: 0.8em;
+      line-height: 24px;
+    }
+  }
 }
